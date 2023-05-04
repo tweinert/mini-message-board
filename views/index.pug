@@ -3,3 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  body
+    table.table.table-striped 
+      tr 
+        th Text 
+        th User 
+        th Added 
+      
+      each n in messages
+        tr
+          td= n.text
+          td= n.user
+          td= n.added
