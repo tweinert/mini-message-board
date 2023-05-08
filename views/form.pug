@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  body 
+    form(method='POST', action='/new')
+      p 
+        | author: 
+        input(type='text', name='author', value='')
+        | <br />message: 
+        input(type='text', name='message', value='')
+      input(type='submit', value='Submit')
